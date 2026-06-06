@@ -28,18 +28,29 @@ Pipeline machine learning meliputi:
 
 ```
 face-recognition-ml/
-├── faces-png/                  # Dataset gambar wajah
-│   └── <userid>/
-│       └── <userid>_<pose>_<expression>_<eyes>_<scale>.png
-├── static/
-│   └── uploads/                # Hasil upload gambar dari web
-├── templates/
-│   └── index.html              # Halaman web (UI)
-├── notebook.ipynb              # Jupyter Notebook: training & evaluasi
-├── app.py                      # Backend Flask
-├── svm_model.pkl               # Model SVM hasil training (disimpan dengan joblib)
-├── requirements.txt            # Daftar dependensi Python
-└── README.md
+│
+├── machine learning/                        # Folder training model ML
+│   ├── .ipynb_checkpoints/                  # Checkpoint otomatis Jupyter
+│   │   ├── TUBES ML (tanpa comment)-c...    # Checkpoint notebook (tanpa komentar)
+│   │   └── TUBES ML-checkpoint.ipynb        # Checkpoint notebook utama
+│   ├── faces-png/                           # Dataset gambar wajah
+│   │   └── <userid>/
+│   │       └── <userid>_<pose>_<expression>_<eyes>_<scale>.png
+│   ├── TUBES ML (tanpa comment).ipynb       # Notebook bersih (tanpa komentar)
+│   ├── TUBES ML.ipynb                       # Notebook utama dengan penjelasan
+│   └── svm_model.pkl                        # Model SVM hasil training
+│
+├── web/                                     # Folder Flask Web App
+│   ├── static/
+│   │   ├── uploads/                         # Gambar hasil upload user
+│   │   └── style.css                        # Styling halaman web
+│   ├── templates/
+│   │   └── index.html                       # Halaman utama (UI prediksi)
+│   ├── app.py                               # Backend Flask
+│   ├── requirements.txt                     # Daftar dependensi Python
+│   └── svm_model.pkl                        # Salinan model untuk web app
+│
+└── README.md                                # Dokumentasi proyek
 ```
 
 ---
@@ -78,11 +89,14 @@ pip install -r requirements.txt
 
 ### 3. Jalankan Notebook (Training)
 
-Buka `notebook.ipynb` dengan Jupyter dan jalankan seluruh sel untuk melatih model dan menyimpan `svm_model.pkl`.
+Buka folder `machine learning/` lalu jalankan `TUBES ML.ipynb` dengan Jupyter. Jalankan seluruh sel untuk melatih model dan menyimpan `svm_model.pkl`.
 
 ### 4. Jalankan Web App
 
+Masuk ke folder `web/` terlebih dahulu:
+
 ```bash
+cd web
 python app.py
 ```
 
