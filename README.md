@@ -180,15 +180,3 @@ pip install -r requirements.txt
 ```
 
 ---
-
-## 👤 Author
-
-**[Nama Anda]**
-- LinkedIn: [linkedin.com/in/username](https://linkedin.com/in/username)
-- GitHub: [github.com/username](https://github.com/username)
-
----
-
-## 📄 Lisensi
-
-Proyek ini dibuat untuk keperluan akademik/pembelajaran. Bebas digunakan dengan menyertakan kredit kepada penulis.
